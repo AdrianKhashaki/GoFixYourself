@@ -1,7 +1,7 @@
 ﻿using UniRx;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerInput))]
+[RequireComponent(typeof(CustomPlayerInput))]
 public class Leg : MonoBehaviour
 {
     [SerializeField] private HingeJoint2D _kneeJoint;
@@ -13,12 +13,12 @@ public class Leg : MonoBehaviour
     [SerializeField] private float _retractTorque;
     [SerializeField] private float _deadzoneTorque;
     
-    private PlayerInput _playerInput;
+    private CustomPlayerInput _playerInput;
     private Controllable _controllable;
 
     private void Awake()
     {
-        _playerInput = GetComponent<PlayerInput>();
+        _playerInput = GetComponent<CustomPlayerInput>();
         _controllable = GetComponent<Controllable>();
     }
 

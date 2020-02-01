@@ -2,15 +2,15 @@
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
-[RequireComponent(typeof(PlayerInput))]
+[RequireComponent(typeof(CustomPlayerInput))]
 public class Lamp : MonoBehaviour
 {
     [SerializeField] private Light2D _light;
-    private PlayerInput _playerInput;
+    private CustomPlayerInput _playerInput;
 
     private void Awake()
     {
-        _playerInput = GetComponent<PlayerInput>();
+        _playerInput = GetComponent<CustomPlayerInput>();
     }
 
     private void Start()
