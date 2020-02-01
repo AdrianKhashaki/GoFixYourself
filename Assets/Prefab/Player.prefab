@@ -74,19 +74,52 @@ MonoBehaviour:
     m_ActionId: a3ab77ae-eeb9-4acc-b462-a4d6ddf0354f
     m_ActionName: Action Maps/Red[/Keyboard/a]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1588284454078465969}
+        m_MethodName: Blue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 285636c1-8e4e-4d3e-8d0a-336262acc0f8
     m_ActionName: Action Maps/Blue[/Keyboard/s]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1588284454078465969}
+        m_MethodName: Yellow
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 39b591f6-d527-4264-927e-bbae6f407176
     m_ActionName: Action Maps/Yellow[/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1588284454078465969}
+        m_MethodName: Green
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: cb403061-ccbf-4ba7-822d-bb0a0608844c
     m_ActionName: Action Maps/Green[/Keyboard/f]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: keyboard
   m_DefaultActionMap: Action Maps
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -102,4 +135,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8006f0b6326764ee3b7fc4e8f81fd3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redButton: 0
+  playerNumber: 1

@@ -1,4 +1,5 @@
-﻿using UniRx;
+﻿using System;
+using UniRx;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -22,5 +23,5 @@ public class CameraController : MonoBehaviour
         var cameraPosition = Camera.transform.position;
         var newPos = Vector2.SmoothDamp(cameraPosition, Player.position, ref _currentVelocity, SmoothTime);
         Camera.transform.position = (Vector3) newPos + cameraPosition.z * Vector3.forward;
-}
+    }
 }
