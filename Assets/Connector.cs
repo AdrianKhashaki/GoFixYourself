@@ -9,8 +9,7 @@ public class Connector : MonoBehaviour
 
     private void Update()
     {
-        var controllableComponent = GetComponentInParent<Controllable>();
-        if (controllableComponent == null || !controllableComponent.IsControllable)
+        if (!IsControllable)
             return;
 
         foreach (var connector in FindObjectsOfType<Connector>())
@@ -37,6 +36,7 @@ public class Connector : MonoBehaviour
     private void Attract(Connector connector)
     {
         var magneticForce = CalculateMagneticForce(connector);
+        magneticForce = Vector2.ClampMagnitude(magneticForce, 10);
 
         ParentRigidBody.AddForce(magneticForce);
         connector.ParentRigidBody.AddForce(-magneticForce);
@@ -51,6 +51,9 @@ public class Connector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!IsControllable)
+            return;
+
         var connector = other.gameObject.GetComponent<Connector>();
         if (connector == null)
             return;
@@ -66,5 +69,14 @@ public class Connector : MonoBehaviour
 
         Destroy(connector.gameObject);
         Destroy(gameObject);
+    }
+
+    private bool IsControllable
+    {
+        get
+        {
+            var controllableComponent = GetComponentInParent<Controllable>();
+            return controllableComponent != null && controllableComponent.IsControllable;
+        }
     }
 }
