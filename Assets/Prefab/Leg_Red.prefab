@@ -154,8 +154,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026032758834717197}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3606, y: 0.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.53, y: -3.7426, z: 0}
+  m_LocalScale: {x: 0.08281085, y: 0.08281085, z: 0.08281085}
   m_Children:
   - {fileID: 1026032759511089082}
   - {fileID: 4723040931920443458}
@@ -262,8 +262,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026032759388461972}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 3.38, y: -3.16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.78, y: -4.0473, z: 0}
+  m_LocalScale: {x: 0.08281085, y: 0.08281085, z: 0.08281085}
   m_Children:
   - {fileID: 1026032758620906730}
   - {fileID: 111430819201230610}
@@ -283,7 +283,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 3.4344707
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -307,7 +307,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 3.0193996, y: -3.6800003}
+  m_ConnectedAnchor: {x: 3.018928, y: -3.6794684}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
@@ -395,7 +395,7 @@ Transform:
   m_GameObject: {fileID: 1026032759426019613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.05, y: 1.19, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1026032758834717186}
   - {fileID: 1026032759388461973}
@@ -616,8 +616,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3021676926396419972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.33, y: -7.82, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.7759, y: -4.4332, z: 0}
+  m_LocalScale: {x: 0.08281085, y: 0.08281085, z: 0.08281085}
   m_Children:
   - {fileID: 3051093870404191230}
   - {fileID: 1406282204562210278}
@@ -637,7 +637,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 3.4400258
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -661,7 +661,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 4.659999, y: -0.050000925}
+  m_ConnectedAnchor: {x: 4.660017, y: -0.049508348}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
@@ -1004,12 +1004,12 @@ PrefabInstance:
     - target: {fileID: 8554715133426339890, guid: ca9b77178eb913447af325091cd5b28a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.040599346
+      value: -0.036230274
       objectReference: {fileID: 0}
     - target: {fileID: 8554715133426339890, guid: ca9b77178eb913447af325091cd5b28a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.029999495
+      value: 0.28498518
       objectReference: {fileID: 0}
     - target: {fileID: 8554715133426339890, guid: ca9b77178eb913447af325091cd5b28a,
         type: 3}
@@ -1059,33 +1059,23 @@ PrefabInstance:
     - target: {fileID: 8554715133426339890, guid: ca9b77178eb913447af325091cd5b28a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.4417
+      value: 12.075713
       objectReference: {fileID: 0}
     - target: {fileID: 8554715133426339890, guid: ca9b77178eb913447af325091cd5b28a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.4417
+      value: 12.075713
       objectReference: {fileID: 0}
     - target: {fileID: 8554715133426339890, guid: ca9b77178eb913447af325091cd5b28a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 6.4417
-      objectReference: {fileID: 0}
-    - target: {fileID: 8554715133426339892, guid: ca9b77178eb913447af325091cd5b28a,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.18
+      value: 12.075713
       objectReference: {fileID: 0}
     - target: {fileID: 8554715133426339893, guid: ca9b77178eb913447af325091cd5b28a,
         type: 3}
       propertyPath: ParentRigidBody
       value: 
       objectReference: {fileID: 1026032758834717184}
-    - target: {fileID: 8554715133426339894, guid: ca9b77178eb913447af325091cd5b28a,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9b77178eb913447af325091cd5b28a, type: 3}
 --- !u!4 &8683873168728908130 stripped
