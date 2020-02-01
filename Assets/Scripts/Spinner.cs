@@ -1,11 +1,11 @@
 ﻿using UniRx;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerInput), typeof(Controllable))]
+[RequireComponent(typeof(CustomPlayerInput), typeof(Controllable))]
 public class Spinner : MonoBehaviour
 {
     public HingeJoint2D SpinnerHinge;
-    private PlayerInput _playerInput;
+    private CustomPlayerInput _playerInput;
     private Controllable _controllable;
 
     public float MotorSpeed;
@@ -14,7 +14,7 @@ public class Spinner : MonoBehaviour
 
     private void Awake()
     {
-        _playerInput = GetComponent<PlayerInput>();
+        _playerInput = GetComponent<CustomPlayerInput>();
         _controllable = GetComponent<Controllable>();
     }
 

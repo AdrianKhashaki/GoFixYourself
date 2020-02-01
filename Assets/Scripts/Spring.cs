@@ -10,7 +10,7 @@ public class Spring : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<PlayerInput>().Button
+        GetComponent<CustomPlayerInput>().Button
             .Where(down => down && IsControllable)
             .Subscribe(_ => CompressSpring())
             .AddTo(gameObject);

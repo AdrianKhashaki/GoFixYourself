@@ -3,6 +3,7 @@
 public class Connector : MonoBehaviour
 {
     public Rigidbody2D ParentRigidBody;
+ 
 
     public float PullForce = 3000f;
     
@@ -71,7 +72,7 @@ public class Connector : MonoBehaviour
             }
         }
 
-        parentControllable.IsControllable = true;
+        parentControllable.ControlledByPlayer = GetComponentInParent<Controllable>().ControlledByPlayer;
 
         Destroy(connector.gameObject);
         Destroy(gameObject);
