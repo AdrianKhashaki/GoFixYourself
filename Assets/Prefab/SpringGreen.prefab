@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 7800895137176824719}
   - component: {fileID: 4564799878749502191}
   - component: {fileID: 6404939890766428220}
+  - component: {fileID: 1497235385859353480}
   m_Layer: 0
-  m_Name: Spring
+  m_Name: SpringGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,6 +77,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c820abd0ef0bc4795d92e86db5c5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayNumber: 0
+--- !u!114 &1497235385859353480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8708446073525162785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a2a8a5a1ed44c1acd974f2f6d7020d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsControllable: 0
 --- !u!1 &8708446073670792556
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +136,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -268,7 +283,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a657c6c8e2eebb44f8e72e872033a251, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -348,7 +363,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
