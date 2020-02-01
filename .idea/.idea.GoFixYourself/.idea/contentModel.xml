@@ -279,6 +279,7 @@
           <e p="PartColorExtensions.cs" t="Include" />
           <e p="PlayerColor.cs" t="Include" />
           <e p="PlayerInput.cs" t="Include" />
+          <e p="Spinner.cs" t="Include" />
           <e p="UtilExtensions.cs" t="Include" />
         </e>
       </e>
