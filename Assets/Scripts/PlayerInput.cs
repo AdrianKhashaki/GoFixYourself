@@ -1,10 +1,12 @@
 ﻿using System;
 using UniRx;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerColor))]
 public class PlayerInput : MonoBehaviour
 {
+    public int PlayNumber; 
     private PlayerColor _playerColor;
 
     public IObservable<bool> ButtonDown;
@@ -13,6 +15,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Awake()
     {
+        var controls = new Controls();
         _playerColor = GetComponent<PlayerColor>();
         ButtonDown = Observable.EveryUpdate().Select(_ => Input.GetButtonDown(_playerColor.Color.ToString()));
         ButtonUp = Observable.EveryUpdate().Select(_ => Input.GetButtonUp(_playerColor.Color.ToString()));
