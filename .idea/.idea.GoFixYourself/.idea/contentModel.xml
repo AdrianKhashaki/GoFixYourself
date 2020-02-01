@@ -272,6 +272,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="CameraController.cs" t="Include" />
           <e p="Connector.cs" t="Include" />
           <e p="Controllable.cs" t="Include" />
           <e p="Lamp.cs" t="Include" />
