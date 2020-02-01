@@ -271,11 +271,15 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Connector.cs" t="Include" />
+          <e p="Controllable.cs" t="Include" />
           <e p="Lamp.cs" t="Include" />
+          <e p="Leg.cs" t="Include" />
           <e p="PartColor.cs" t="Include" />
           <e p="PartColorExtensions.cs" t="Include" />
           <e p="PlayerColor.cs" t="Include" />
           <e p="PlayerInput.cs" t="Include" />
+          <e p="UtilExtensions.cs" t="Include" />
         </e>
       </e>
       <e p="GoFixYourself.sln" t="IncludeFlat" />

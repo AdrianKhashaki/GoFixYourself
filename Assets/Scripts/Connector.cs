@@ -4,9 +4,8 @@ public class Connector : MonoBehaviour
 {
     public Rigidbody2D ParentRigidBody;
 
-    public float PullForce = 1f;
-    public float PullDistance = 0.5f;
-
+    public float PullForce = 3000f;
+    
     private void Update()
     {
         if (!IsControllable)
@@ -36,7 +35,6 @@ public class Connector : MonoBehaviour
     private void Attract(Connector connector)
     {
         var magneticForce = CalculateMagneticForce(connector);
-        magneticForce = Vector2.ClampMagnitude(magneticForce, 10);
 
         ParentRigidBody.AddForce(magneticForce);
         connector.ParentRigidBody.AddForce(-magneticForce);

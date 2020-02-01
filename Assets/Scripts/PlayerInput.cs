@@ -10,7 +10,7 @@ public class PlayerInput : MonoBehaviour
     public IObservable<bool> ButtonDown;
     public IObservable<bool> ButtonUp;
     public IObservable<bool> Button;
-    
+
     private void Awake()
     {
         _playerColor = GetComponent<PlayerColor>();
