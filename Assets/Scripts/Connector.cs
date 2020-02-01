@@ -64,14 +64,6 @@ public class Connector : MonoBehaviour
         if (parentControllable == null)
             parentControllable = otherParent.AddComponent<Controllable>();
         
-        if (connector.GetComponentInParent<SpringJoint2D>() != null)
-        {
-            foreach (var rigidBody in connector.GetComponentsInParent<Rigidbody2D>())
-            {
-                rigidBody.freezeRotation = true;
-            }
-        }
-
         parentControllable.ControlledByPlayer = GetComponentInParent<Controllable>().ControlledByPlayer;
 
         Destroy(connector.gameObject);
