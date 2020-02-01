@@ -46,8 +46,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2, y: 0}
-  m_Size: {x: 0.99, y: 10}
+  m_Offset: {x: -1, y: 0}
+  m_Size: {x: 0.495, y: 2}
   m_Direction: 0
 --- !u!70 &8905176105090394552
 CapsuleCollider2D:
@@ -63,7 +63,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.99, y: 10}
+  m_Size: {x: 0.495, y: 2}
   m_Direction: 0
 --- !u!70 &4811938238716921360
 CapsuleCollider2D:
@@ -78,8 +78,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2, y: 0}
-  m_Size: {x: 0.99, y: 10}
+  m_Offset: {x: 1, y: 0}
+  m_Size: {x: 0.495, y: 2}
   m_Direction: 0
 --- !u!1 &2448115122943670472
 GameObject:
@@ -281,8 +281,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1, y: 0}
-  m_Size: {x: 0.99, y: 10}
+  m_Offset: {x: -0.5, y: 0}
+  m_Size: {x: 0.495, y: 2}
   m_Direction: 0
 --- !u!70 &1582700059728845849
 CapsuleCollider2D:
@@ -297,8 +297,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1, y: 0}
-  m_Size: {x: 0.99, y: 10}
+  m_Offset: {x: 0.5, y: 0}
+  m_Size: {x: 0.495, y: 2}
   m_Direction: 0
 --- !u!1 &7190755842034298782
 GameObject:
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Top: {fileID: 6874194408811821628}
   Bottom: {fileID: 6392930363868496994}
-  Force: 130
+  Force: 500
 --- !u!114 &4564799878749502191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,10 +706,10 @@ SpringJoint2D:
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 1
+  m_AutoConfigureDistance: 0
   m_Distance: 0.70000005
-  m_DampingRatio: 0.2
-  m_Frequency: 4
+  m_DampingRatio: 0.1
+  m_Frequency: 10
 --- !u!50 &6874194408811821628
 Rigidbody2D:
   serializedVersion: 4
