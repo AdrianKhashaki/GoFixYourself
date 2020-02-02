@@ -277,6 +277,8 @@
           <e p="Connector.cs" t="Include" />
           <e p="Controllable.cs" t="Include" />
           <e p="CustomPlayerInput.cs" t="Include" />
+          <e p="Extensions.cs" t="Include" />
+          <e p="Hammer.cs" t="Include" />
           <e p="Lamp.cs" t="Include" />
           <e p="Leg.cs" t="Include" />
           <e p="Lifetime.cs" t="Include" />
