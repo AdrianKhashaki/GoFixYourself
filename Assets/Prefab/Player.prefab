@@ -118,6 +118,21 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cb403061-ccbf-4ba7-822d-bb0a0608844c
     m_ActionName: Action Maps/Green[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1588284454078465969}
+        m_MethodName: Movement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 55b309f8-8c21-448f-a3e1-3c9ca2ae7b1f
+    m_ActionName: Action Maps/Movement[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: keyboard
   m_DefaultActionMap: Action Maps
@@ -136,3 +151,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
+  DirectionalInput: 3

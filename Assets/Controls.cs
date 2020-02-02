@@ -49,6 +49,14 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""55b309f8-8c21-448f-a3e1-3c9ca2ae7b1f"",
+                    ""expectedControlType"": ""Stick"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -139,6 +147,72 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""action"": ""Green"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ade5abc0-82ef-4a66-a1b1-3c3b94ed15e3"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""544c44e1-6ea8-4523-a80a-c2bd8aa760b1"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""6089f9f4-8a2b-4e14-aee3-903e44d4ff65"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""2ae30f83-485c-443a-809a-ae08dc17ddb6"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""e383df89-48d4-45c8-a4eb-b769919952b1"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""0a61d5d8-0f5e-4677-86c0-b3e779d8bb37"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -174,6 +248,7 @@ public class @Controls : IInputActionCollection, IDisposable
         m_ActionMaps_Blue = m_ActionMaps.FindAction("Blue", throwIfNotFound: true);
         m_ActionMaps_Yellow = m_ActionMaps.FindAction("Yellow", throwIfNotFound: true);
         m_ActionMaps_Green = m_ActionMaps.FindAction("Green", throwIfNotFound: true);
+        m_ActionMaps_Movement = m_ActionMaps.FindAction("Movement", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -227,6 +302,7 @@ public class @Controls : IInputActionCollection, IDisposable
     private readonly InputAction m_ActionMaps_Blue;
     private readonly InputAction m_ActionMaps_Yellow;
     private readonly InputAction m_ActionMaps_Green;
+    private readonly InputAction m_ActionMaps_Movement;
     public struct ActionMapsActions
     {
         private @Controls m_Wrapper;
@@ -235,6 +311,7 @@ public class @Controls : IInputActionCollection, IDisposable
         public InputAction @Blue => m_Wrapper.m_ActionMaps_Blue;
         public InputAction @Yellow => m_Wrapper.m_ActionMaps_Yellow;
         public InputAction @Green => m_Wrapper.m_ActionMaps_Green;
+        public InputAction @Movement => m_Wrapper.m_ActionMaps_Movement;
         public InputActionMap Get() { return m_Wrapper.m_ActionMaps; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -256,6 +333,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Green.started -= m_Wrapper.m_ActionMapsActionsCallbackInterface.OnGreen;
                 @Green.performed -= m_Wrapper.m_ActionMapsActionsCallbackInterface.OnGreen;
                 @Green.canceled -= m_Wrapper.m_ActionMapsActionsCallbackInterface.OnGreen;
+                @Movement.started -= m_Wrapper.m_ActionMapsActionsCallbackInterface.OnMovement;
+                @Movement.performed -= m_Wrapper.m_ActionMapsActionsCallbackInterface.OnMovement;
+                @Movement.canceled -= m_Wrapper.m_ActionMapsActionsCallbackInterface.OnMovement;
             }
             m_Wrapper.m_ActionMapsActionsCallbackInterface = instance;
             if (instance != null)
@@ -272,6 +352,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Green.started += instance.OnGreen;
                 @Green.performed += instance.OnGreen;
                 @Green.canceled += instance.OnGreen;
+                @Movement.started += instance.OnMovement;
+                @Movement.performed += instance.OnMovement;
+                @Movement.canceled += instance.OnMovement;
             }
         }
     }
@@ -300,5 +383,6 @@ public class @Controls : IInputActionCollection, IDisposable
         void OnBlue(InputAction.CallbackContext context);
         void OnYellow(InputAction.CallbackContext context);
         void OnGreen(InputAction.CallbackContext context);
+        void OnMovement(InputAction.CallbackContext context);
     }
 }

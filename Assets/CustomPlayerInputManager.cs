@@ -9,10 +9,13 @@ public class CustomPlayerInputManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public int playerNumber;
+    public float DirectionalInput;
+
     private bool red = false;
     private bool green = false;
     private bool blue = false;
     private bool yellow = false;
+    private Vector2 movement = Vector2.zero;
 
     public void Red(InputAction.CallbackContext context)
     {
@@ -96,6 +99,11 @@ public class CustomPlayerInputManager : MonoBehaviour
         }
     }
 
+    public void Movement(InputAction.CallbackContext context)
+    {
+        movement = context.ReadValue<Vector2>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -105,6 +113,22 @@ public class CustomPlayerInputManager : MonoBehaviour
             input.inputActive(PartColor.Yellow, yellow);
             input.inputActive(PartColor.Blue, blue);
             input.inputActive(PartColor.Green, green);
+            AddMovement(input);
+        }
+    }
+
+    private void AddMovement(CustomPlayerInput input)
+    {
+        var rigidBody = input.GetComponent<Rigidbody2D>();
+        if (rigidBody != null)
+        {
+            rigidBody.AddForce(movement * DirectionalInput * rigidBody.mass);
+            return;
+        }
+
+        foreach (var childRigidBody in input.GetComponentsInChildren<Rigidbody2D>())
+        {
+            childRigidBody.AddForce(movement * DirectionalInput * childRigidBody.mass);
         }
     }
 
