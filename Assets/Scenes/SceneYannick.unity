@@ -6370,7 +6370,7 @@ PrefabInstance:
     - target: {fileID: 8691151880860557361, guid: 734d96826b4a045e6b4589c510dc893b,
         type: 3}
       propertyPath: parts.Array.size
-      value: 25
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8691151880860557361, guid: 734d96826b4a045e6b4589c510dc893b,
         type: 3}
@@ -6390,7 +6390,7 @@ PrefabInstance:
     - target: {fileID: 8691151880860557361, guid: 734d96826b4a045e6b4589c510dc893b,
         type: 3}
       propertyPath: size
-      value: 25
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8691151880860557361, guid: 734d96826b4a045e6b4589c510dc893b,
         type: 3}
@@ -6414,7 +6414,37 @@ PrefabInstance:
         type: 3}
       propertyPath: parts.Array.data[24]
       value: 
-      objectReference: {fileID: 8038903497571555785, guid: 054c9ffb66460d647a30a937f8763e2a,
+      objectReference: {fileID: 1592945607637111090, guid: d82171ddf4dd6564da4385490e862aac,
+        type: 3}
+    - target: {fileID: 8691151880860557361, guid: 734d96826b4a045e6b4589c510dc893b,
+        type: 3}
+      propertyPath: parts.Array.data[5]
+      value: 
+      objectReference: {fileID: 4301783942144324333, guid: b45850c20fe6ec647b012ad846c0f8f5,
+        type: 3}
+    - target: {fileID: 8691151880860557361, guid: 734d96826b4a045e6b4589c510dc893b,
+        type: 3}
+      propertyPath: parts.Array.data[6]
+      value: 
+      objectReference: {fileID: 3082603434122553746, guid: fe95855b8776eb54b802bac9c0a0af43,
+        type: 3}
+    - target: {fileID: 8691151880860557361, guid: 734d96826b4a045e6b4589c510dc893b,
+        type: 3}
+      propertyPath: parts.Array.data[25]
+      value: 
+      objectReference: {fileID: 1592945607637111090, guid: d82171ddf4dd6564da4385490e862aac,
+        type: 3}
+    - target: {fileID: 8691151880860557361, guid: 734d96826b4a045e6b4589c510dc893b,
+        type: 3}
+      propertyPath: parts.Array.data[26]
+      value: 
+      objectReference: {fileID: 1592945607637111090, guid: d82171ddf4dd6564da4385490e862aac,
+        type: 3}
+    - target: {fileID: 8691151880860557361, guid: 734d96826b4a045e6b4589c510dc893b,
+        type: 3}
+      propertyPath: parts.Array.data[27]
+      value: 
+      objectReference: {fileID: 1592945607637111090, guid: d82171ddf4dd6564da4385490e862aac,
         type: 3}
     - target: {fileID: 8691151880860557374, guid: 734d96826b4a045e6b4589c510dc893b,
         type: 3}
