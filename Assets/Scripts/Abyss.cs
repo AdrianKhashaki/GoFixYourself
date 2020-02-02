@@ -13,6 +13,7 @@ public class Abyss : MonoBehaviour
         }
         else
         {
+            WinNotifier.LoserId = other.GetPlayerAffinity();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
