@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LifeTimeInSeconds: 5
-  ExplosionForce: 50
+  ExplosionForce: 10
   ExplosionRadius: 5
 --- !u!1 &8899154823772264117
 GameObject:

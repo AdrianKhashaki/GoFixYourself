@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95e6a7ca6b0a545ec85f9d11cc90e2de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 17
+  size: 21
   parts:
   - {fileID: 3226457045669495669, guid: 182bcb80fa6a0ba44ac7d4deffca6a62, type: 3}
   - {fileID: 4414808678810113278, guid: c6d333aa6f9249842b82bc5c7eed6e60, type: 3}
@@ -62,6 +62,10 @@ MonoBehaviour:
   - {fileID: 8405248086567852973, guid: 456bffd3c5dfb064ab1328273d09b203, type: 3}
   - {fileID: 454395944776105733, guid: e4094c21e78856c448e349b84bbd2598, type: 3}
   - {fileID: 1730892113345007686, guid: f78d8da0f80307b4882ddcf16c8be08d, type: 3}
+  - {fileID: 1718311706814733556, guid: a146800188fbd514d9a83161f8f95ebd, type: 3}
+  - {fileID: 5659770819833090215, guid: a5b32f72ce51a4b49b2f9597fa3e067a, type: 3}
+  - {fileID: 8089602449246668062, guid: a0a74c928a180a741979f1512afceca9, type: 3}
+  - {fileID: 4985362271621142975, guid: d0b2b9f0eb1fdcb4380bf752ec65247c, type: 3}
   spawnRateMin: 2
   spawnRateMax: 5
   y: 5

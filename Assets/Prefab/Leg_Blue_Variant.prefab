@@ -95,6 +95,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 3f4542263f634d543bbff681980fe760,
         type: 3}
+    - target: {fileID: 6375918626698005220, guid: c6d333aa6f9249842b82bc5c7eed6e60,
+        type: 3}
+      propertyPath: ControlledByPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8505550302803905695, guid: c6d333aa6f9249842b82bc5c7eed6e60,
         type: 3}
       propertyPath: m_ConnectedAnchor.x

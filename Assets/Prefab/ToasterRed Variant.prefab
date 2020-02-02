@@ -13,6 +13,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6429bc211a3e1134f98c9e393dacf00f,
         type: 3}
+    - target: {fileID: 5652405305609552397, guid: 9eaa2cf178f79f047afa75aaa78e8900,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7754570926270413176, guid: 9eaa2cf178f79f047afa75aaa78e8900,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 7896156639883773729, guid: 9eaa2cf178f79f047afa75aaa78e8900,
         type: 3}
       propertyPath: m_Name
-      value: ToasterRed
+      value: ToasterRed Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8814983081404111587, guid: 9eaa2cf178f79f047afa75aaa78e8900,
         type: 3}
