@@ -6,13 +6,20 @@ public class Leg : MonoBehaviour
 {
     [SerializeField] private HingeJoint2D _kneeJoint;
     [SerializeField] private HingeJoint2D _footJoint;
-    [SerializeField] private float _hingeDeadzone;
-    [SerializeField] private float _kickSpeed;
-    [SerializeField] private float _kickTorque;
-    [SerializeField] private float _retractSpeed;
-    [SerializeField] private float _retractTorque;
-    [SerializeField] private float _deadzoneTorque;
-    
+    [SerializeField] private float _footHingeDeadzone;
+    [SerializeField] private float _footKickSpeed;
+    [SerializeField] private float _footKickTorque;
+    [SerializeField] private float _footRetractSpeed;
+    [SerializeField] private float _footRetractTorque;
+    [SerializeField] private float _footDeadzoneTorque;
+
+    [SerializeField] private float _kneeHingeDeadzone;
+    [SerializeField] private float _kneeKickSpeed;
+    [SerializeField] private float _kneeKickTorque;
+    [SerializeField] private float _kneeRetractSpeed;
+    [SerializeField] private float _kneeRetractTorque;
+    [SerializeField] private float _kneeDeadzoneTorque;
+
     private CustomPlayerInput _playerInput;
 
     private void Awake()
@@ -32,11 +39,11 @@ public class Leg : MonoBehaviour
         if (on) {
             Debug.Log("Kikcing");
         }
-        KickMotor(on, _kneeJoint, true);
-        KickMotor(on, _footJoint, false);
+        KickMotor(on, _kneeJoint, true, _kneeHingeDeadzone, _kneeKickTorque, _kneeKickSpeed, _kneeRetractTorque, _kneeRetractSpeed, _kneeDeadzoneTorque);
+        KickMotor(on, _footJoint, false, _footHingeDeadzone, _footKickTorque, _footKickSpeed, _footRetractTorque, _footRetractSpeed, _footDeadzoneTorque);
     }
     
-    private void KickMotor(bool on, HingeJoint2D joint, bool leg)
+    private void KickMotor(bool on, HingeJoint2D joint, bool leg, float hingeDeadzone, float kickTorque, float kickSpeed, float retractTorque, float retractSpeed, float deadzoneTorque)
     {
         var motor = joint.motor;
         var distanceToMax = Mathf.Abs(joint.jointAngle - joint.limits.max);
@@ -44,19 +51,19 @@ public class Leg : MonoBehaviour
 
         var factor = leg ? 1 : -1;
         
-        if (on && distanceToMin > _hingeDeadzone)
+        if (on && distanceToMin > hingeDeadzone)
         {
-            motor.maxMotorTorque = _kickTorque;
-            motor.motorSpeed = factor *_kickSpeed;
+            motor.maxMotorTorque = kickTorque;
+            motor.motorSpeed = factor *kickSpeed;
         }
-        else if (!on && distanceToMax > _hingeDeadzone)
+        else if (!on && distanceToMax > hingeDeadzone)
         {
-            motor.maxMotorTorque = _retractTorque;
-            motor.motorSpeed = factor * _retractSpeed;
+            motor.maxMotorTorque = retractTorque;
+            motor.motorSpeed = factor * retractSpeed;
         }
         else
         {
-            motor.maxMotorTorque = _deadzoneTorque;
+            motor.maxMotorTorque = deadzoneTorque;
             motor.motorSpeed = 0f;
         }
 

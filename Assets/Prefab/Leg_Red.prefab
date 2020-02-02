@@ -176,10 +176,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
-  m_LinearDrag: 7.34
+  m_Mass: 0.02
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 0
@@ -283,10 +283,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3.4344707
+  m_Mass: 0.2434471
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 0
@@ -442,12 +442,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _kneeJoint: {fileID: 1026032759388462058}
   _footJoint: {fileID: 5003629676302592380}
-  _hingeDeadzone: 15
-  _kickSpeed: -1000
-  _kickTorque: 10000
-  _retractSpeed: 500
-  _retractTorque: 500
-  _deadzoneTorque: 0
+  _footHingeDeadzone: 15
+  _footKickSpeed: -8000
+  _footKickTorque: 10000
+  _footRetractSpeed: 200
+  _footRetractTorque: 200
+  _footDeadzoneTorque: 0
+  _kneeHingeDeadzone: 15
+  _kneeKickSpeed: -2000
+  _kneeKickTorque: 2000
+  _kneeRetractSpeed: 200
+  _kneeRetractTorque: 200
+  _kneeDeadzoneTorque: 0
 --- !u!114 &7710846957570764551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a2a8a5a1ed44c1acd974f2f6d7020d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ControlledByPlayer: 0
+  ControlledByPlayer: 2
 --- !u!1 &1026032759511089061
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,10 +643,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3.4400258
+  m_Mass: 0.3440026
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 0

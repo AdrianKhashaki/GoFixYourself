@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
     public Transform Player2;
     public float SmoothTime;
     public float ExtraZoom;
+    public float minOrthSize = 0.5f;
 
     private Vector2 _currentVelocity = Vector3.zero;
     
@@ -45,6 +46,10 @@ public class CameraController : MonoBehaviour
         }
 
         float newSize = Mathf.Lerp(Camera.orthographicSize, minSize, 0.5f);
+        if(newSize < minOrthSize)
+        {
+            newSize = minOrthSize;
+        }
         Camera.orthographicSize = newSize;
     }
 }
