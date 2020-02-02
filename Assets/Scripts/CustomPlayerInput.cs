@@ -11,13 +11,10 @@ public class CustomPlayerInput : MonoBehaviour
     public Subject<bool> ButtonDown = new Subject<bool>();
     public Subject<bool> ButtonUp = new Subject<bool>();
     public Subject<bool> Button = new Subject<bool>();
+    public Subject<Vector2> Movement = new Subject<Vector2>();
 
     public void inputActive(PartColor color, bool active)
     {
-        if (active)
-        {
-            Debug.Log("Active: " + color);
-        }
         if (color == _playerColor.Color)
         {
             Button.OnNext(active);
@@ -26,7 +23,6 @@ public class CustomPlayerInput : MonoBehaviour
 
     public void inputDown(PartColor color)
     {
-        Debug.Log("Down: " + color);
         if (color == _playerColor.Color)
         {
             ButtonDown.OnNext(true);
@@ -35,11 +31,15 @@ public class CustomPlayerInput : MonoBehaviour
 
     public void inputUp(PartColor color)
     {
-        Debug.Log("Up: " + color);
         if (color == _playerColor.Color)
         {
             ButtonUp.OnNext(true);
         }
+    }
+
+    public void inputMovement(Vector2 movement)
+    {
+        Movement.OnNext(movement);
     }
 
     private void Awake()

@@ -113,11 +113,12 @@ public class CustomPlayerInputManager : MonoBehaviour
             input.inputActive(PartColor.Yellow, yellow);
             input.inputActive(PartColor.Blue, blue);
             input.inputActive(PartColor.Green, green);
-            AddMovement(input);
+            input.inputMovement(movement);
+            AddDirectionalInput(input);
         }
     }
 
-    private void AddMovement(CustomPlayerInput input)
+    private void AddDirectionalInput(CustomPlayerInput input)
     {
         var rigidBody = input.GetComponent<Rigidbody2D>();
         if (rigidBody != null)
