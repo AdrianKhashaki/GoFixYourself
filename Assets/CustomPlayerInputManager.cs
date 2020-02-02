@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -107,21 +108,10 @@ public class CustomPlayerInputManager : MonoBehaviour
         }
     }
 
-    private List<CustomPlayerInput> getCustomPlayerInputs()
+    private IEnumerable<CustomPlayerInput> getCustomPlayerInputs()
     {
-        var inputs = new List<CustomPlayerInput>();
-        foreach (var controllable in FindObjectsOfType<Controllable>())
-        {
-            if (controllable.ControlledByPlayer == playerNumber)
-            {
-                foreach (var input in controllable.GetComponentsInParent<CustomPlayerInput>())
-                {
-                    inputs.Add(input);
-                }
-            }
-        }
-
-        return inputs;
+        return FindObjectsOfType<CustomPlayerInput>()
+            .Where(input => input.GetPlayerAffinity() == playerNumber);
     }
 
     private void Awake()

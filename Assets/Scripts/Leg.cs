@@ -14,18 +14,15 @@ public class Leg : MonoBehaviour
     [SerializeField] private float _deadzoneTorque;
     
     private CustomPlayerInput _playerInput;
-    private Controllable _controllable;
 
     private void Awake()
     {
         _playerInput = GetComponent<CustomPlayerInput>();
-        _controllable = GetComponent<Controllable>();
     }
 
     private void Start()
     {
         _playerInput.Button
-            .Where(_ => _controllable.IsControllable)
             .Subscribe(KickLeg)
             .AddTo(this);
     }

@@ -11,18 +11,9 @@ public class Spring : MonoBehaviour
     private void Start()
     {
         GetComponent<CustomPlayerInput>().Button
-            .Where(down => down && IsControllable)
+            .Where(down => down)
             .Subscribe(_ => CompressSpring())
             .AddTo(gameObject);
-    }
-
-    private bool IsControllable
-    {
-        get
-        {
-            var controllableComponent = GetComponent<Controllable>();
-            return controllableComponent != null && controllableComponent.IsControllable;
-        }
     }
 
     private void CompressSpring()

@@ -9,15 +9,13 @@ public class Connector : MonoBehaviour
     
     private void Update()
     {
-        if (!IsControllable)
+        if (this.GetPlayerAffinity() == 0)
             return;
 
         foreach (var connector in FindObjectsOfType<Connector>())
         {
-            if (connector.transform.root == transform.root)
-                continue;
-
-            Attract(connector);
+            if (connector.GetPlayerAffinity() == 0)
+                Attract(connector);
         }
     }
 
@@ -50,32 +48,18 @@ public class Connector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!IsControllable)
-            return;
-
         var connector = other.gameObject.GetComponent<Connector>();
         if (connector == null)
             return;
+        
+        if (other.GetPlayerAffinity() != 0 || this.GetPlayerAffinity() == 0)
+            return;
 
         ParentRigidBody.gameObject.AddComponent<FixedJoint2D>().connectedBody = connector.ParentRigidBody;
-        var otherParent = connector.transform.root.gameObject;
 
-        var parentControllable = otherParent.GetComponent<Controllable>();
-        if (parentControllable == null)
-            parentControllable = otherParent.AddComponent<Controllable>();
-        
-        parentControllable.ControlledByPlayer = GetComponentInParent<Controllable>().ControlledByPlayer;
+        connector.SetPlayerAffinity(this.GetPlayerAffinity());
 
         Destroy(connector.gameObject);
         Destroy(gameObject);
-    }
-
-    private bool IsControllable
-    {
-        get
-        {
-            var controllableComponent = GetComponentInParent<Controllable>();
-            return controllableComponent != null && controllableComponent.IsControllable;
-        }
     }
 }
