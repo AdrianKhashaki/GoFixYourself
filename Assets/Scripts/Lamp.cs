@@ -5,7 +5,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 [RequireComponent(typeof(CustomPlayerInput))]
 public class Lamp : MonoBehaviour
 {
-    [SerializeField] private Light2D _light;
+    [SerializeField] private Light2D[] _light;
     private CustomPlayerInput _playerInput;
 
     private void Awake()
@@ -20,6 +20,9 @@ public class Lamp : MonoBehaviour
 
     private void SwitchLight(bool on)
     {
-        _light.intensity = on ? 1 : 0;
+        foreach (var light2D in _light)
+        {
+            light2D.intensity = on ? 1 : 0;
+        }
     }
 }
