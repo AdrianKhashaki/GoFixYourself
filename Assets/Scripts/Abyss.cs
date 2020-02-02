@@ -8,8 +8,12 @@ public class Abyss : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetPlayerAffinity() == 0)
-            return;
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        {
+            Destroy(other.gameObject);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
