@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class Connector : MonoBehaviour
 {
@@ -35,8 +36,14 @@ public class Connector : MonoBehaviour
     {
         var magneticForce = CalculateMagneticForce(connector);
 
-        ParentRigidBody.AddForce(magneticForce);
-        connector.ParentRigidBody.AddForce(-magneticForce);
+        var playerAffinity = this.GetPlayerAffinity();
+
+        foreach (var rigidBody in FindObjectsOfType<Rigidbody2D>().Where(rigidBody => rigidBody.GetPlayerAffinity() == playerAffinity))
+        {
+            rigidBody.AddForce(magneticForce * rigidBody.mass);
+        }
+
+        connector.ParentRigidBody.AddForce(-magneticForce * connector.ParentRigidBody.mass);
     }
 
     private Vector2 CalculateMagneticForce(Component other)
