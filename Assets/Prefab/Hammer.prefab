@@ -224,7 +224,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 30
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -408,7 +408,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -640,8 +640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hammerJoint: {fileID: 3659186037810219792}
   _hingeDeadzone: 15
-  _swingSpeed: 1000
-  _swingTorque: 20000
+  _swingSpeed: 4000
+  _swingTorque: 30000
   _retractSpeed: -800
   _retractTorque: 10000
   _deadzoneTorque: 0
