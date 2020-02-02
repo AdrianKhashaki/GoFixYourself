@@ -273,12 +273,15 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Abyss.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
+          <e p="CameraMover.cs" t="Include" />
           <e p="Connector.cs" t="Include" />
           <e p="Controllable.cs" t="Include" />
           <e p="CustomPlayerInput.cs" t="Include" />
           <e p="Extensions.cs" t="Include" />
           <e p="Hammer.cs" t="Include" />
+          <e p="Honk.cs" t="Include" />
           <e p="Lamp.cs" t="Include" />
           <e p="Leg.cs" t="Include" />
           <e p="Lifetime.cs" t="Include" />
@@ -286,6 +289,8 @@
           <e p="PartColorExtensions.cs" t="Include" />
           <e p="PlayerColor.cs" t="Include" />
           <e p="Rigidbody2DExt.cs" t="Include" />
+          <e p="SineBlinker.cs" t="Include" />
+          <e p="Spawner.cs" t="Include" />
           <e p="Spinner.cs" t="Include" />
           <e p="Spring.cs" t="Include" />
           <e p="SpringBody.cs" t="Include" />
