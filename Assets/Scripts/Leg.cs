@@ -29,6 +29,9 @@ public class Leg : MonoBehaviour
 
     private void KickLeg(bool on)
     {
+        if (on) {
+            Debug.Log("Kikcing");
+        }
         KickMotor(on, _kneeJoint, true);
         KickMotor(on, _footJoint, false);
     }
